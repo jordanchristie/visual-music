@@ -1,7 +1,7 @@
 import React from "react";
 import SoundPlayer from "../../components/SoundPlayer/SoundPlayer.component";
 import Visualizer from "../../components/Visualizer/Visualizer.component";
-import PlayerBar from "../../components/PlayerBar/PlayerBar.component";
+//import PlayerBar from "../../components/PlayerBar/PlayerBar.component";
 import "./App.css";
 
 let soundReset = {
@@ -69,32 +69,21 @@ class App extends React.Component {
       onSongEnd
     } = this.state;
     return (
-      <>
-        <div className="visualmusic">
-          <Visualizer
-            volume={volume}
-            isPlaying={isPlaying}
-            uploadedSong={uploadedSong}
-            onSongEnd={onSongEnd}
-          />
-          <SoundPlayer
-            volume={volume}
-            buttonText={buttonText}
-            onPlayPress={this.onPlayPress}
-            onVolumeChange={this.onVolumeChange}
-            onFileUpload={this.onFileUpload}
-          />
-        </div>
-        <>
-          <PlayerBar
-            volume={volume}
-            buttonText={buttonText}
-            onPlayPress={this.onPlayPress}
-            onVolumeChange={this.onVolumeChange}
-            onFileUpload={this.onFileUpload}
-          />
-        </>
-      </>
+      <div className="visualmusic">
+        <Visualizer
+          volume={volume}
+          isPlaying={isPlaying}
+          uploadedSong={uploadedSong}
+          onSongEnd={onSongEnd}
+        />
+        <SoundPlayer
+          volume={volume}
+          buttonText={buttonText}
+          onPlayPress={this.onPlayPress}
+          onVolumeChange={this.onVolumeChange}
+          onFileUpload={this.onFileUpload}
+        />
+      </div>
     );
   }
 }
