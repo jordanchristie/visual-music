@@ -1,0 +1,65 @@
+.player-bar {
+  display: flex;
+  align-items: center;
+  background: #0FA797;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.player-bar > div, .player-bar > button {
+  margin: .25em 2em;
+}
+
+.player-bar > svg {
+  margin-left: 2em;
+} 
+
+.song-info {
+  margin-left: 0;
+}
+
+.song-title {
+  font-weight: bold;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress > p {
+  margin: 1em;
+}
+
+.progress-bar {
+  position: relative;
+  height: 12px;
+  width: 25vw;
+  background: #fff;
+  opacity: 0.2;
+  border-radius: 10px;
+}
+
+.progress-meter {
+  height: 12px;
+  width: 10%;
+  background: #fff;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.play-controls *, .interactive-controls * {
+  margin: 1em;
+  vertical-align: middle;
+}
+
+
+button {
+  background: transparent;
+  padding: 1em;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+}
